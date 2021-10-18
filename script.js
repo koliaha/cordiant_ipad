@@ -6,7 +6,7 @@ var photo = document.getElementById("photo"),
 
 // Increase brush radius if it's  small
 if (brushRadius < 100) {
-  brushRadius = 50;
+  brushRadius = 30;
 }
 // Load image
 img.src = "img/bw.jpg";
@@ -65,7 +65,7 @@ photo.addEventListener(
       drawDot(brushPos.x, brushPos.y);
       counterTouch++
     }
-    if (counterTouch >= 350){
+    if (counterTouch >= 250){
         setTimeout(darker, 500);
         return
     }
