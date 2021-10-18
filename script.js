@@ -6,7 +6,7 @@ var photo = document.getElementById("photo"),
 
 // Increase brush radius if it's  small
 if (brushRadius < 100) {
-  brushRadius = 100;
+  brushRadius = 50;
 }
 // Load image
 img.src = "img/bw.jpg";
@@ -65,8 +65,9 @@ photo.addEventListener(
       drawDot(brushPos.x, brushPos.y);
       counterTouch++
     }
-    if (counterTouch >= 700){
+    if (counterTouch >= 400){
         setTimeout(darker, 1000);
+        return
     }
   },
   false
@@ -85,9 +86,10 @@ iconHand.addEventListener("animationend", function () {
 
 // Add black gradient to photo after time
 function darker() {
-  photo.style.opacity = "0.7";
+  // photo.style.opacity = "0.7";
   let btn = document.querySelector(".button");
   btn.classList.add("button_animate");
+  document.getElementById('Stage').style.display = "block"
 }
 
 

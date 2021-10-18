@@ -6,11 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <style>
+            #Stage { cursor: pointer; width: 320px; height: 480px; z-index: 1000; display: none;}
+        </style>
     </head>
     <body>
+        <div  id="Stage" width="320" height="480" style="position: absolute; left: 0; top: 0; background-color:rgba(255, 255, 255, 0.00);"></div>
+
         <figure id="container">
             <div class="start">
-                <canvas id="photo" width="768" height="1040"></canvas>
+                <canvas id="photo" width="320" height="480"></canvas>
                 <img class="icon-hand" src="img/hand.svg" alt="icon-hand">
                 <h2><span class="start__text">Потри экран</span></h2>
             </div>
