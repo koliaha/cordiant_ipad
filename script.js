@@ -65,8 +65,8 @@ photo.addEventListener(
       drawDot(brushPos.x, brushPos.y);
       counterTouch++
     }
-    if (counterTouch >= 400){
-        setTimeout(darker, 1000);
+    if (counterTouch >= 350){
+        setTimeout(darker, 500);
         return
     }
   },
@@ -89,6 +89,7 @@ function darker() {
   // photo.style.opacity = "0.7";
   let btn = document.querySelector(".button");
   btn.classList.add("button_animate");
+  photoCanvas.drawImage(img, 0, 0, photo.width, photo.height);
   document.getElementById('Stage').style.display = "block"
 }
 
