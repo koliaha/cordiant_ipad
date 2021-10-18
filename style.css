@@ -106,8 +106,8 @@ h2 {
 .button {
     position: absolute;
     padding: 15px 33px;
-    right: 40px;
-    top: 45%;
+    min-width: 230px;
+    top: 40%;
     background: #FCD43E;
     border: 2px solid #FFFFFF;
     box-sizing: border-box;
@@ -117,7 +117,8 @@ h2 {
     color: #000000;
     text-align: center;
     /* margin-left: -80px; */
-    transform: translate(-5%, -100%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-transform: uppercase;
     visibility: hidden;
 }
