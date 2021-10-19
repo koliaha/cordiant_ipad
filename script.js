@@ -65,7 +65,7 @@ photo.addEventListener(
       drawDot(brushPos.x, brushPos.y);
       counterTouch++
     }
-    if (counterTouch >= 250){
+    if (counterTouch >= 150){
         setTimeout(darker, 500);
         return
     }
