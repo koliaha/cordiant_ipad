@@ -73,7 +73,9 @@ h2 {
     animation-duration: 4s !important;
 }
 
-.button {
+.d-none{
+    display: none;
+}.button {
     position: absolute;
     padding: 15px 33px;
     min-width: 230px;

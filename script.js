@@ -55,7 +55,7 @@ photo.addEventListener(
     if (counterTouch == 1) {
       let iconHand = document.querySelector(".icon-hand");
       let startText = document.querySelector(".start__text");
-      iconHand.classList.add("zoomOut");
+      iconHand.classList.add("zoomOut", "d-none");
       startText.classList.add("animated","zoomOut");
  
     }
