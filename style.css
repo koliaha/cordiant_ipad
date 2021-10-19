@@ -39,26 +39,6 @@ body {
     cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/circular-cursor.png) 50 50, crosshair;
 }
 
-/* .start__logo {
-    width: 74%;
-    height: auto;
-    display: inline-block;
-    position: absolute;
-    top: 2%;
-    left: 50%;
-    margin-left: -37%;
-}
-
-.start__logo {
-    animation: start__logo__cssAnimation 0s 12s forwards;
-    visibility: visible;
-}
-
-@keyframes start__logo__cssAnimation {
-    to {
-        visibility: hidden;
-    }
-} */
 
 h2 {
     position: absolute;
@@ -76,18 +56,7 @@ h2 {
     /* margin-left: -120px; */
 }
 
-/* .finish__text {
-    display: inline-block;
-    font-family: "Gilroy";
-    font-size: 36px;
-    color: #ffffff;
-    text-align: center;
-    margin-left: -170px;
-}
-.finish__text {
-    animation: cssAnimation 0s 10s forwards;
-    visibility: hidden;
-} */
+
 
 
 
@@ -96,46 +65,51 @@ h2 {
     /* display: inline-block; */
     position: absolute;
     top: 30%;
-    width: 25%;
+    width: 30%;
     height: auto;
     left: 50%;
     /* transform: translateX(-50%); */
-    margin-left: -13%;
+    margin-left: -17%;
+    animation-duration: 4s !important;
 }
 
 .button {
     position: absolute;
     padding: 15px 33px;
     min-width: 230px;
-    top: 40%;
+    top: 35%;
     background: #FCD43E;
     border: 2px solid #FFFFFF;
     box-sizing: border-box;
-    border-radius: 20px;
+    border-radius: 12px;
     font-family: "Gilroy";
     font-size: 16px;
     color: #000000;
     text-align: center;
     /* margin-left: -80px; */
-    left: 50%;
+    left: 15%;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
     visibility: hidden;
+    animation: pulse 2s infinite;
 }
 
 .button_animate {
-    /* animation: cssAnimation 0s 12s forwards; */
-    animation: cssAnimation 0s 0s forwards;
+    visibility: visible;
 }
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
 
-.button:active {
-    color: #ccc;
-}
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
 
-
-
-@keyframes cssAnimation {
-    to {
-        visibility: visible;
-    }
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
 }

@@ -41,19 +41,6 @@ function drawDot(mouseX, mouseY) {
   photoCanvas.fill();
 }
 
-// Track left mouse button to TEST
-photo.addEventListener(
-  "mousemove",
-  function (e) {
-    var brushPos = getBrushPos(e.clientX, e.clientY);
-    // var leftBut = detectLeftButton(e);
-    // if (leftBut == 1) {
-    //   drawDot(brushPos.x, brushPos.y);
-    // }
-  },
-  false
-);
-
 // Track touch move
 photo.addEventListener(
   "touchmove",
@@ -63,11 +50,18 @@ photo.addEventListener(
     if (touch) {
       var brushPos = getBrushPos(touch.pageX, touch.pageY);
       drawDot(brushPos.x, brushPos.y);
-      counterTouch++
+      counterTouch++;
     }
-    if (counterTouch >= 150){
-        setTimeout(darker, 500);
-        return
+    if (counterTouch == 1) {
+      let iconHand = document.querySelector(".icon-hand");
+      let startText = document.querySelector(".start__text");
+      iconHand.classList.add("zoomOut");
+      startText.classList.add("animated","zoomOut");
+ 
+    }
+    if (counterTouch >= 150) {
+      setTimeout(darker, 500);
+      return;
     }
   },
   false
@@ -77,12 +71,7 @@ photo.addEventListener(
 
 // Animate hand icon and start text
 let iconHand = document.querySelector(".icon-hand");
-let startText = document.querySelector(".start__text");
-iconHand.classList.add("animated", "wobble", "delay-1s");
-iconHand.addEventListener("animationend", function () {
-  iconHand.classList.add("zoomOut");
-  startText.classList.add("animated", "zoomOut", "delay-1s");
-});
+iconHand.classList.add("animated", "infinite", "wobble");
 
 // Add black gradient to photo after time
 function darker() {
@@ -90,9 +79,8 @@ function darker() {
   let btn = document.querySelector(".button");
   btn.classList.add("button_animate");
   photoCanvas.drawImage(img, 0, 0, photo.width, photo.height);
-  document.getElementById('Stage').style.display = "block"
+  document.getElementById("Stage").style.display = "block";
 }
-
 
 // Click button
 let button = document.querySelector(".button");
