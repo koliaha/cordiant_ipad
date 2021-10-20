@@ -25,6 +25,7 @@ body {
     max-height: 100vh;
     height: 100%;
     margin: 0 auto;
+    position: relative;
 }
 
 #photo {
@@ -56,8 +57,13 @@ h2 {
     /* margin-left: -120px; */
 }
 
-
-
+.finish{
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 
 
@@ -73,13 +79,15 @@ h2 {
     animation-duration: 4s !important;
 }
 
-.d-none{
+.d-none {
     display: none;
-}.button {
-    position: absolute;
+}
+
+
+.button {
     padding: 15px 33px;
-    min-width: 230px;
-    top: 35%;
+    width: 230px;
+    margin: 0 auto;
     background: #FCD43E;
     border: 2px solid #FFFFFF;
     box-sizing: border-box;
@@ -88,30 +96,31 @@ h2 {
     font-size: 16px;
     color: #000000;
     text-align: center;
-    /* margin-left: -80px; */
-    left: 15%;
-    transform: translate(-50%, -50%);
     text-transform: uppercase;
+    font-weight: bold;
     visibility: hidden;
     animation: pulse 2s infinite;
+
 }
+
 
 .button_animate {
     visibility: visible;
 }
+
 @keyframes pulse {
-	0% {
-		transform: scale(0.95);
-		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-	}
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
 
-	70% {
-		transform: scale(1);
-		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-	}
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
 
-	100% {
-		transform: scale(0.95);
-		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-	}
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
 }
